@@ -13,8 +13,16 @@ OUTPUT = app
 # Definir los archivos fuente
 SRCS = Secuencial.cpp
 
-all:
+all: $(OUTPUT)
+
+$(OUTPUT): $(SRCS)
 	$(CXX) $(CXXFLAGS) $(SRCS) -o $(OUTPUT) $(LIBS)
+
+.PHONY: run clean
+
+run: $(OUTPUT)
+	./$(OUTPUT)
 
 clean:
 	rm -f $(OUTPUT)
+

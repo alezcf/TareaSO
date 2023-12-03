@@ -10,7 +10,7 @@ int main() {
     auto start = chrono::high_resolution_clock::now();
 
     // Leer la imagen
-    Mat image = imread("imagen.jpg", IMREAD_COLOR);
+    Mat image = imread("imagen2.jpg", IMREAD_COLOR);
 
     // Verificar si la imagen se ha cargado correctamente
     if (image.empty()) {
